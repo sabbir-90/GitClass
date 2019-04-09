@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>Form Validation</head>
+<body>
+<form name="myForm">
+Name:<input type="text" name="pNam"><br>
+Contact:<input type="number" name="pNum"><br>
+Sex:<input type="radio" name="gender" value="male" checked>male
+	<input type="radio" name="gender" value="Female">Female<br>
+Remarks:<input type="textarea" name= "text" rows="10" cols="30"><br>
+Courses:<input type="checkbox" class="checkbox" value="NET">NET
+		<input type="checkbox" class="checkbox" value="J2E">J2E
+		<input type="checkbox" class="checkbox" value="DDT">DDT<br>
+Locations:<select name="location">
+		<option>Mirpur</option>
+		<option>Rampura</option>
+		<option>Banani</option>
+		</select>
+	
+<input type="button" value="submit" onclick="myFunciton()">
+</form>
+<script>
+function myFunciton(){
+var inputName=document.myForm.pNam.value;
+var inputContact=document.myForm.pNum.value;
+var inputGender=document.querySelector("input[name=gender]:checked").value;
+var inputRemarks=document.myForm.text.value;
+var inputCourses=document.querySelector("input[class=checkbox]:checked").value;
+var inputLocation=document.myForm.location.value;
+
+
+var myWindow=window.open("", "Form Validation", "height=500, width=500");
+
+myWindow.document.write("<p>"+ inputName+ "</p>");
+
+myWindow.document.write("<p>"+ inputContact+ "</p>");
+
+myWindow.document.write("<p>"+ inputGender+ "</p>");
+
+myWindow.document.write("<p>"+ inputRemarks+ "</p>");
+
+myWindow.document.write("<p>"+ inputCourses+ "</p>");
+
+myWindow.document.write("<p>"+ inputLocation+ "</p>");
+
+
+}
+
+</script>
+
+</body>
+
+
+
+</html>
